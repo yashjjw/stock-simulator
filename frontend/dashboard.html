@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>WELCOME TO SIMULATOR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="../fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script src="../dashboard.js"></script>
+</head>
+
+<body>
+
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg  bg-dark" id="nav">
+    </nav>
+  </header>
+  <script src="../navbar.js"></script>
+
+  <div class="section bg-primary" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 element-animate ">
+          <div class="media block-6 d-block text-center">
+            <div class="media-body">
+              <h3 class="heading text-white">Welcome to your Simulator</h3>
+              <table>
+                <tr>
+                  <td>Name</td>
+                  <td id="uname"></td>
+                </tr>
+                <tr>
+                  <td>Email Id</td>
+                  <td id="uemail"></td>
+                </tr>
+                <tr>
+                  <td>Value Flow</td>
+                  <td id="uvf"></td>
+                </tr>
+                <tr>
+                  <td>Cash Flow</td>
+                  <td id="ucf"></td>
+                </tr>
+                <tr>
+                  <td>Share Flow</td>
+                  <td id="usf"></td>
+                </tr>
+              </table>
+              <script>
+                document.getElementById("uname").innerHTML = "Kuldeep Patel";
+                document.getElementById("uemail").innerHTML = "patelkd00710@gmail.com";
+                document.getElementById("uvf").innerHTML = 10000;
+                document.getElementById("ucf").innerHTML = 2000;
+                document.getElementById("usf").innerHTML = 8000;
+
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6" id="f">
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+      </div>
+      <div class="col-sm-6">
+        <form style="margin-left: 40px; margin-top: 130px;">
+          <input type="text" placeholder="Search your Stock Transaction!!!" id="trans">
+
+
+        </form>
+        <button type="submit" name="button" id="btn">Search</button>
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <table id="show" style="margin-top: 10px;">
+              <thead>
+                <tr>
+                  <th>
+                    <center>Stock ID</center>
+                  </th>
+                  <th>
+                    <center>Stock Name</center>
+                  </th>
+                  <th>
+                    <center>Quantity</center>
+                  </th>
+                  <th>
+                    <center>Buying Price</center>
+                  </th>
+                  <th>
+                    <center>Current Price</center>
+                  </th>
+                  <th>
+                    <center>Profit/Loss</center>
+                  </th>
+                  <th>time</th>
+                </tr>
+                <tr>
+                  <td>200</td>
+                  <td>200</td>
+                  <td>200</td>
+                  <td>200</td>
+                  <td>200</td>
+                  <td>200</td>
+                  <td>17:00</td>
+                </tr>
+              </thead>
+            </table>
+
+          </div>
+
+        </div>
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("btn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+
+          // When the user clicks the button, open the modal 
+          btn.onclick = function () {
+            modal.style.display = "block";
+
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+
+
+          var dash = document.getElementById("dashboard");
+          dash.className = "nav-link active";
+
+        </script>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#f4b214" /></svg></div>
+
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.fancybox.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
