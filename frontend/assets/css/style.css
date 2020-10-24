@@ -41,6 +41,14 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+#trans{
+  width: 50%;
+    padding: 12px 20px;
+    margin: center;
+    box-sizing: border-box;
+    border:  solid #007bff ;
+    border-radius: 4px;
+  }
 .stocksearch{
     text-align: center;
 }
@@ -52,6 +60,14 @@ width: 60%;
   border: 2px solid #007bff;
   border-radius: 4px;
 }
+#quant{
+  width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+  }
 #btn{
   background-color: #007bff;
   border: none;
