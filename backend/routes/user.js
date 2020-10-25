@@ -84,7 +84,7 @@ router.post('/buy/:id', (req, res) => {
     console.log(y)
     console.log(x)
     
-    var money = parseInt(y.rate) * parseInt(y.quantity);
+    var money = parseFloat(y.rate) * parseInt(y.quantity);
 
     Sign.findOne({ "_id": x} , function (err, result) {
         if (err) throw err;
@@ -173,5 +173,22 @@ router.get('/portfolio/:id', (req, res) => {
             res.json("false");
         })
 })
+
+//////////// GET ALL DETAILS  //////////////
+
+router.get('/all/:id', (req, res) => {
+    var x = req.params.id
+    console.log(x)
+    Sign.findOne({ "_id": x })
+        .then((data) => {
+            //console.log(data.cash)
+            res.json(data);
+        })
+        .catch(() => {
+            res.json("false");
+        })
+})
+
+
 
 module.exports = router;
