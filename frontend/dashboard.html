@@ -19,7 +19,6 @@
   <!-- Theme Style -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/dashboard.css">
-  <script src="../dashboard.js"></script>
 </head>
 
 <body>
@@ -39,7 +38,7 @@
               <h3 class="heading text-white">Welcome to your Simulator</h3>
               <table>
                 <tr>
-                  <td>Name</td>
+                  <td>User Name</td>
                   <td id="uname"></td>
                 </tr>
                 <tr>
@@ -47,24 +46,27 @@
                   <td id="uemail"></td>
                 </tr>
                 <tr>
-                  <td>Value Flow</td>
-                  <td id="uvf"></td>
+                  <td>Cash Available</td>
+                  <td id="cash"></td>
                 </tr>
                 <tr>
-                  <td>Cash Flow</td>
-                  <td id="ucf"></td>
+                  <td>Portfolio current value</td>
+                  <td id="pval"></td>
                 </tr>
                 <tr>
-                  <td>Share Flow</td>
-                  <td id="usf"></td>
+                  <td>Profit/Loss realised</td>
+                  <td id="pr"></td>
+                </tr>
+                <tr>
+                  <td>Profit/Loss unrealised</td>
+                  <td id="pur"></td>
                 </tr>
               </table>
               <script>
-                document.getElementById("uname").innerHTML = "Kuldeep Patel";
-                document.getElementById("uemail").innerHTML = "patelkd00710@gmail.com";
-                document.getElementById("uvf").innerHTML = 10000;
-                document.getElementById("ucf").innerHTML = 2000;
-                document.getElementById("usf").innerHTML = 8000;
+
+                var dash = document.getElementById("dashboard");
+                dash.className = "nav-link active";
+
 
               </script>
             </div>
@@ -97,30 +99,13 @@
                     <center>Stock ID</center>
                   </th>
                   <th>
-                    <center>Stock Name</center>
-                  </th>
-                  <th>
                     <center>Quantity</center>
                   </th>
                   <th>
                     <center>Buying Price</center>
                   </th>
-                  <th>
-                    <center>Current Price</center>
-                  </th>
-                  <th>
-                    <center>Profit/Loss</center>
-                  </th>
-                  <th>time</th>
-                </tr>
-                <tr>
-                  <td>200</td>
-                  <td>200</td>
-                  <td>200</td>
-                  <td>200</td>
-                  <td>200</td>
-                  <td>200</td>
-                  <td>17:00</td>
+
+                  <th>Time</th>
                 </tr>
               </thead>
             </table>
@@ -128,42 +113,6 @@
           </div>
 
         </div>
-
-        <script>
-          // Get the modal
-          var modal = document.getElementById("myModal");
-
-          // Get the button that opens the modal
-          var btn = document.getElementById("btn");
-
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
-
-
-          // When the user clicks the button, open the modal 
-          btn.onclick = function () {
-            modal.style.display = "block";
-
-          }
-
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function () {
-            modal.style.display = "none";
-          }
-
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function (event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
-            }
-          }
-
-
-          var dash = document.getElementById("dashboard");
-          dash.className = "nav-link active";
-
-        </script>
-
       </div>
     </div>
   </div>
@@ -182,6 +131,7 @@
   <script src="../js/jquery.waypoints.min.js"></script>
   <script src="../js/jquery.fancybox.min.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../dashboard.js"></script>
 </body>
 
 </html>

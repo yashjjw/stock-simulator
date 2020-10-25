@@ -245,7 +245,7 @@
             window.alert("Problem");
           }
         })
-        document.getElementById("message").innerHTML=document.getElementById("squantity").value+" stocks of "+document.getElementById("sname").innerHTML+" bought successfully at price of "+document.getElementById("sprice").innerHTML;
+        document.getElementById("message").innerHTML=document.getElementById("squantity").value+" stocks of "+document.getElementById("sname").innerHTML+" bought successfully at a rate of "+document.getElementById("sprice").innerHTML;
 
         modal.style.display = "none";
       }
@@ -286,8 +286,8 @@
           document.getElementById("sdiff").innerHTML = (last - close).toFixed(2);
           document.getElementById("shigh").innerHTML = data.dayHigh;
           document.getElementById("slow").innerHTML = data.dayLow;
-          document.getElementById("52wh").innerHTML = data.low52;
-          document.getElementById("52wl").innerHTML = data.high52;
+          document.getElementById("52wh").innerHTML = data.high52;
+          document.getElementById("52wl").innerHTML = data.low52;
           var a = window.location.href;
           a = a.split('/');
           a = a[3];
