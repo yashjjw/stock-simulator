@@ -138,6 +138,7 @@
 
     </form>
     <button id="btn">Search</button>
+    <h3 id="message" style="color: #087408; margin-top: 100px;"></h3>
   </section>
 
 
@@ -244,6 +245,9 @@
             window.alert("Problem");
           }
         })
+        document.getElementById("message").innerHTML=document.getElementById("squantity").value+" stocks of "+document.getElementById("sname").innerHTML+" bought successfully at price of "+document.getElementById("sprice").innerHTML;
+
+        modal.style.display = "none";
       }
       // When the user clicks the button, open the modal 
       btn.onclick = function () {

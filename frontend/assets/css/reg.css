@@ -28,7 +28,7 @@
     margin-bottom: 15px;
       
   }
-  #reg{
+  .button{
     background-color: #007bff;
     border: none;
     color: white;
@@ -37,3 +37,9 @@
     margin-left: 495px;
     cursor: pointer;
   } 
+  #ref{
+    margin-left: 75px;
+}
+#but{
+    margin-left: 0px;
+}

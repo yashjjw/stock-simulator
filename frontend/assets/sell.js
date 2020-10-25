@@ -111,7 +111,7 @@ function sell1(btnName) {
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            location.reload();
         }
     }
 }
@@ -147,10 +147,14 @@ function sell() {
                 window.alert("Problem");
             }
         })
+        document.getElementById("mssg").innerHTML="Stock sell successfully !!!"
     }
+    else{
+        document.getElementById("mssg").innerHTML= ` <h3 style="color: red;" id="mssg">Insufficient stock quantity  !!!</h3> `
 
-    location.reload()
-
+    }
+    setTimeout(function(){location.reload();}, 4000);
+    
 }
     
 
