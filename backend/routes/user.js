@@ -99,7 +99,7 @@ router.post('/buy/:id', (req, res) => {
     Sign.findOne({ "_id": x, "portfolio.stockID": y.stockID }, function (err, data) {
 
         if (!data) {
-            Sign.updateOne({ "_id": x }, { $push: { "portfolio": { "stockID": y.stockID, "quantity": y.quantity, "rate": y.rate } } }, function (err, result) {
+            Sign.updateOne({ "_id": x }, { $push: { "portfolio": { "stockID": y.stockID, "quantity": y.quantity, "rate": y.rate , "transactions" : {  "quantity": y.quantity, "rate": y.rate } } } }, function (err, result) {
                 if (err) throw err;
                 res.send(result);
             })
@@ -128,12 +128,13 @@ router.post('/buy/:id', (req, res) => {
                     res.send(result);
                 })
             })
-        }
 
-        Sign.updateOne({ "_id": x, "portfolio.stockID": y.stockID }, { $push: { "portfolio.$.transactions": { "quantity": y.quantity, "rate": y.rate } } }, function (err, result) {
-            if (err) throw err;
-            //res.send(result);
-        })
+            Sign.updateOne({ "_id": x, "portfolio.stockID": y.stockID }, { $push: { "portfolio.$.transactions": { "quantity": y.quantity, "rate": y.rate } } }, function (err, result) {
+                if (err) throw err;
+                //res.send(result);
+                console.log("updated")
+            })
+        }
 
         //res.send(data);
 
@@ -141,7 +142,6 @@ router.post('/buy/:id', (req, res) => {
         //console.log(data)
     })
 
-    
 })
 
 //////////// GET CASH DETAILS  //////////////

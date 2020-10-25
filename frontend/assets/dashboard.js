@@ -84,9 +84,8 @@ btn.onclick = async function () {
     if(rstock==stock){
       trans=data1[i].transactions
       var table = document.getElementById("show");
-      var rowCount = table.rows.length;
-      var row = table.insertRow(rowCount);
       for(var j=0; j<trans.length; j++){
+        var row = table.insertRow(j+1);
         //Column 1
         var cell1 = row.insertCell(0);
         cell1.innerHTML = stock;
